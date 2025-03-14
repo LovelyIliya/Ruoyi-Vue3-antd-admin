@@ -1,0 +1,30 @@
+$main-color: #1677ff;
+
+// while
+$while-bg-color: #fff;
+$while-first-text: #000000e0;
+$while-second-text: #000000a6;
+$while-third-text: #00000040;
+$while-box-bg-color: rgba(255, 255, 255, 0.6);
+//dark
+$dark-bg-color: #141414;
+$dark-first-text: #ffffffd9;
+$dark-second-text: #ffffffa6;
+$dark-third-text: #ffffff40;
+$dark-box-bg-color: rgba(255, 255, 255, 0.05);
+
+:export {
+  MainColor: $main-color;
+  //while
+  WhileBgColor: $while-bg-color;
+  WhileFirstText: $while-first-text;
+  WhileSecondText: $while-second-text;
+  WhileThirdText: $while-third-text;
+  WhileBoxBgColor: $while-box-bg-color;
+  //dark
+  DarkBgColor: $dark-bg-color;
+  DarkFirstText: $dark-first-text;
+  DarkSecondText: $dark-second-text;
+  DarkThirdText: $dark-third-text;
+  DarkBoxBgColor: $dark-box-bg-color;
+}

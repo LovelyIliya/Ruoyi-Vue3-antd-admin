@@ -1,0 +1,115 @@
+.ant-app {
+  height: 100%;
+  width: 100%;
+}
+.ant-drawer-content,.ant-modal-content{
+  background: var(--base-background) left top no-repeat !important;
+  background-size: cover !important;
+}
+.ant-modal-header{
+  background: none !important;
+}
+.ant-menu-light {
+  background: none;
+  border-inline-end: none !important;
+}
+.ant-progress-bg{
+  overflow: hidden;
+  &::before{
+    left: 0 !important;
+    background: repeating-linear-gradient(45deg, #1677ff 0 30px, #52c41a 0 40px) right / 200% 100%;
+    animation: progressAnima 3s infinite linear !important;
+    min-width: 1200px;
+    height: 100%;
+    opacity: 1 !important;
+  }
+}
+.full-modal {
+  min-width: 1400px;
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+  }
+  .ant-modal-body {
+    flex: 1;
+  }
+}
+
+.ant-empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes progressAnima {
+  100% {
+    background-position: left
+  }
+}
+
+// 主题兼容
+html[data-theme='light']{
+  .ant-layout-sider{
+    background: rgba(255,255,255,0.4);
+  }
+  .ant-layout-header{
+    //background: rgba(255,255,255,0.6);
+    background: #fff;
+  }
+  //.ant-card,
+  //.ant-input,
+  //.ant-picker,
+  //.ant-input-password,
+  //.ant-input-affix-wrapper{
+  //  background: rgba($color: #fff, $alpha: 0.6);
+  //}
+  //.ant-input-password .ant-input,
+  //.ant-input-affix-wrapper .ant-input,
+  //.ant-select-auto-complete.ant-select{
+  //  background: none !important;
+  //}
+
+  //.ant-select-selector{
+  //  background: rgba($color: #fff, $alpha: 0.6) !important;
+  //}
+  .table-striped td {
+    background-color: #fafafa;
+  }
+}
+html[data-theme='dark']{
+  //.ant-layout-sider{
+  //  background: rgba(255,255,255,0.08);
+  //}
+  //.ant-layout-header{
+  //  background: rgba(255,255,255,0.05);
+  //}
+  .ant-card,
+  .ant-input,
+  .ant-picker,
+  .ant-input-password,
+  .ant-input-affix-wrapper{
+    background: rgba($color: #fff, $alpha: 0.05);
+  }
+  .ant-input-password .ant-input,
+  .ant-input-affix-wrapper .ant-input,
+  .ant-select-auto-complete.ant-select{
+    background: none !important;
+  }
+  .ant-select-selector{
+    background: rgba($color: #fff, $alpha: 0.05) !important;
+  }
+  .table-striped td {
+    background-color: rgb(29, 29, 29);
+  }
+}
+.ant-picker {
+  width: 100%;
+}
+

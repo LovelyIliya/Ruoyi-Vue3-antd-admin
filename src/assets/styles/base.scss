@@ -1,0 +1,42 @@
+@use "./variables.module";
+
+:root {
+  --main-width: 1400px;
+  --main-color: #{variables.$main-color};
+  //--base-background:url('../bgImgs/bgImg_53.jpeg');
+  --base-background:#{variables.$while-bg-color};
+
+  --border-color: #d9d9d9ff;
+  --box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+    0 1px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px 0 rgba(0, 0, 0, 0.02);
+
+  --base-margin:24px;
+
+  --green-color: #52c41a;
+  --blue-color: #1677ff;
+  --orange-color: #FAAD14;
+  --red-color: #FF4D4F;
+}
+html[data-theme='light']:root{
+  --first-lv-text: #{variables.$while-first-text};
+  --second-lv-text: #{variables.$while-second-text};
+  --third-lv-text: #{variables.$while-third-text};
+  --box-bg-color: #{variables.$while-box-bg-color};
+}
+html[data-theme='dark']:root{
+  --first-lv-text: #{variables.$dark-first-text};
+  --second-lv-text: #{variables.$dark-second-text};
+  --third-lv-text: #{variables.$dark-third-text};
+  --box-bg-color: #{variables.$dark-box-bg-color};
+}
+html[data-theme='dark']{
+  div,p,span,a,h1,h2,h3,h4,h5,h6,ul,li,button,i{
+    color: #{variables.$dark-first-text};
+  }
+}
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
